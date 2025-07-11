@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const AppStyled = styled.div`
-    height: 100vh;
-    background-color: ${(props) => props.theme.background};
+    min-height: 100vh;
+    background-color: ${(props) => props.theme.neutralLight};
+    background-color: white;
     color: ${(props) => props.theme.color};
 `
 
