@@ -10,14 +10,16 @@ const LandingPage = ({toggleTheme, isDarkMode}) => {
         
         <SplitPageStyled >
 
-            <SplitOneStyled class='landing'>
-                <h4 class='meddon-regular'>Welcome to</h4>
+            <SplitOneStyled className='landing'>
+                <h4 className='meddon-regular'>Welcome to</h4>
                 <h2>Faith Works Church</h2>
             </SplitOneStyled>
             <SplitTwoStyled>
-                <h5>Join us</h5>
-                <h2>Sunday Service</h2>
-                <h4>11am @ church location</h4>
+                <h5>Please join us</h5>
+                <h2 className='michroma-regular fs-huge mainH2'>Sunday <br/> Worship</h2>
+                <h2 className='subH2 ballet-cursive'>Service</h2>
+                <h5>Granger High School</h5>
+                <h5>1100 Eastway Drive Charlotte, NC 28205</h5>
             </SplitTwoStyled>
         </SplitPageStyled>
     </LandingPageStyled>)

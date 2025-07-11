@@ -4,6 +4,7 @@
 *::after {
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+  /* line-height: 4rem; */
 }
 /* 2. Remove default margin */
 * {
@@ -78,6 +79,17 @@ h5 {
 }
 .meddon-regular {
   font-family: "Meddon", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.michroma-regular {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ballet-cursive {
+  font-family: "Ballet", cursive;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
