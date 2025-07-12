@@ -1,18 +1,12 @@
 import React from "react";
-import { CiLight } from "react-icons/ci";
-import { MdLightMode } from "react-icons/md";
 import { LandingPageStyled, SplitPageStyled, SplitOneStyled, SplitTwoStyled } from "./LandingPageStyled";
 const LandingPage = ({toggleTheme, isDarkMode}) => {
     return(
     <LandingPageStyled>
         {/* {isDarkMode? <MdLightMode onClick={() => toggleTheme()}/>: <CiLight onClick={() => toggleTheme()}/>} */}
-        
-        
         <SplitPageStyled >
-
             <SplitOneStyled className='landing'>
-                <h4 className='meddon-regular'>Welcome to</h4>
-                <h2>Faith Works Church</h2>
+                <img src="/assets/low_res_black_logo.jpeg" alt="faith works logo" />
             </SplitOneStyled>
             <SplitTwoStyled>
                 <h5>Please join us</h5>

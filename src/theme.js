@@ -20,6 +20,7 @@ export const lightTheme= {
   export const blackGoldTheme = {
     background: '#000000',
     logo: 'no-repeat center/150% url(/assets/low_res_black_logo.jpeg)',
+    logo_small: 'no-repeat center/100% url(/assets/low_res_black_logo.jpeg)',
     gradient_grey_black: 'linear-gradient(180deg,rgba(48, 48, 48, 1) 0%, rgba(38, 38, 38, 1) 61%, rgba(0, 0, 0, 1) 100%)',
     color: '#D4AF37',
     dark: `#0D0D0D`,
