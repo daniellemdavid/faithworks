@@ -2,8 +2,10 @@ import React, { useState } from "react";
 
 import { ThemeProvider } from "styled-components";
 import { AppStyled } from "./AppStyled";
-import LandingPage from "./LandingPage/LandingPage";
-import { darkTheme, lightTheme, blueGreenTheme, blackGoldTheme } from "./theme";
+// import LandingPage from "./LandingPage/LandingPage";
+// import LandingPage from "./LandingPage/LandingPageV2";
+import LandingPage from "./LandingPage/ChurchLandingPage";
+import { blackGoldTheme } from "./theme";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -11,7 +13,6 @@ function App() {
   return (
     <ThemeProvider theme={blackGoldTheme}>
       <AppStyled >
-        
         
           <LandingPage toggleTheme={toggleTheme} isDarkMode={isDarkMode}/>
         
