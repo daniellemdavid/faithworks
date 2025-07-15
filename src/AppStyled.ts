@@ -5,7 +5,7 @@ export const AppStyled = styled.div`
     background-color: ${(props) => props.theme.neutralLight};
     background-color: white;
     color: ${(props) => props.theme.color};
-      margin: auto;
+    margin: auto;
 `
 
 export const FooterStyled = styled.footer`
