@@ -4,14 +4,10 @@ import styled from "styled-components";
 import ChurchLogo from "/assets/low_res_black_logo.jpeg";
 
 const LandingWrapper = styled.div`
-  background-color: rgb(223, 202, 131, 0.4);
   background-color: rgb(0, 0, 0);
-  //   color: #F5F5DC;
   color: black;
   min-height: 100vh;
-
   align-items: center;
-  //   padding: 2rem;
 `;
 
 const Hero = styled.section`
@@ -58,14 +54,17 @@ const PastorImage = styled.img`
 const WelcomeText = styled.h1`
   font-size: 2.5rem;
   color: #d4af37;
-  //   color:black;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
+  line-height: 3rem;
+  >*{
+  line-height: 1rem;
+  margin-top: 5px;
+  }
 `;
 
 const SubText = styled.p`
   font-size: 1.125rem;
   max-width: 600px;
-  //   color:rgb(0, 0, 0);
   color: white;
 `;
 
@@ -84,13 +83,14 @@ const MapLink = styled.a`
   }
 `;
 
-const LandingPage = () => (
+const CarouselWContents = () => (
   <LandingWrapper>
     <Carousel autoplay>
       <Hero>
         <PastorImage src={ChurchLogo} alt="Our Pastor" />
         <WelcomeText className={"michroma-regular"}>
-          Welcome to Faith Works
+          FAITH WORKS
+          <span style={{display:'block', fontSize: '.7rem'}}>POWER AND DELIVERANCE CHRISTIAN MINISTRIES</span>
         </WelcomeText>
         <SubText>
           Join us every Sunday at 1:00 PM as we gather to worship, learn, and
@@ -131,4 +131,4 @@ const LandingPage = () => (
   </LandingWrapper>
 );
 
-export default LandingPage;
+export default CarouselWContents;

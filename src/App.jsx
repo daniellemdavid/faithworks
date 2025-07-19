@@ -8,15 +8,23 @@ import { AppStyled } from "./AppStyled";
 import { CiLocationOn } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoTimeOutline } from "react-icons/io5";
-import LandingPage from "./LandingPage/ChurchLandingPage";
+import CarouselWContents from "./LandingPage/CarouselContents";
 import { blackGoldTheme } from "./theme";
 import ChurchLogo from "/assets/low_res_black_logo.jpeg";
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const toggleTheme = () => setIsDarkMode((prev) => !prev);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <ThemeProvider theme={blackGoldTheme}>
       <AppStyled>
+        <PageContainer>
+          {isDrawerOpen && <Drawer>
+            <Link to="/">Home</Link>
+              <Link to="/">Gallery</Link>
+              <Link to="/">About Us</Link>
+              <Link to="/">Sermons</Link>
+              <Link to="/">Give</Link>
+        </Drawer>}
+        <div style={{width: '100vw', minHeight:'100vh'}}>
         <Header>
           <Location>
             <MeetingDetails className="meetDetails">
@@ -37,39 +45,61 @@ function App() {
               <Link to="/">Home</Link>
               <Link to="/">Gallery</Link>
               <Link to="/">About Us</Link>
-              <Link to="/about">Sermons</Link>
-              <Link to="/" style={{border: '1px solid lightgray', borderRadius: '6px', backgroundColor: 'gray', padding: '0px 8px', color: 'gold'}}>Give</Link>
+              <Link to="/">Sermons</Link>
+              <Link to="/">Give</Link>
               
             </nav>
           </Location>
-          <Hamburger><GiHamburgerMenu /></Hamburger>
+          <Hamburger onClick={()=> setIsDrawerOpen(prev => !prev)}><GiHamburgerMenu /></Hamburger>
           <Logo src={ChurchLogo} alt="Church Logo" />
         </Header>
-
+        
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<CarouselWContents/>} />
 
           {/* <Route path="/about" element={<About />} /> */}
           {/* Catch-all 404 */}
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
+        </div>
+        </PageContainer>
       </AppStyled>
     </ThemeProvider>
   );
 }
+const PageContainer = styled.div`
+display: flex;
+`
 const Header = styled.div`
   display: grid;
   grid-template-columns: 1fr 10%;
   padding: .3rem .7rem;
   border-bottom: 1px solid #d4af37;
   background-color: white;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
   @media only screen and (max-width: 600px) {
   }
 `;
 const Hamburger = styled.span`
+
 @media only screen and (min-width: 600px) {
+    display: none;
+  }
+`
+const Drawer = styled.nav`
+  display: flex;
+  flex-direction: column;
+  
+  padding: 30px 0;
+  gap: 20px;
+  
+  >*{
+  width: 40vw;
+  padding: 10px;
+  text-align: center;
+  }
+   @media only screen and (min-width: 600px) {
     display: none;
   }
 `
@@ -99,11 +129,8 @@ const Location = styled.div`
   flex-direction: column;
   justify-content: space-between;
   a.mapLink {
-    // color: #d4af37;
     color: gray;
-    // text-decoration: none;
     border-radius: 20px;
-    // background-color:rgb(239, 232, 209);
     &:hover {
       color: black;
     }

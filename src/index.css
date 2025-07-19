@@ -8,6 +8,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* overflow: hidden; */
   /* line-height: 4rem; */
 }
 /* 2. Remove default margin */
@@ -20,12 +21,16 @@
     interpolate-size: allow-keywords;
   }
 }
+html{
+  overflow: hidden;
+}
 body {
   /* 4. Add accessible line-height */
   /* line-height: 1.5; */
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: "Barlow Condensed", sans-serif;
+  overflow: hidden;
 }
 a{
   text-decoration: none;
