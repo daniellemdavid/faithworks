@@ -18,11 +18,11 @@ function App() {
       <AppStyled>
         <PageContainer>
           {isDrawerOpen && <Drawer>
-            <Link to="/">Home</Link>
+            {/* <Link to="/">Home</Link>
               <Link to="/">Gallery</Link>
               <Link to="/">About Us</Link>
               <Link to="/">Sermons</Link>
-              <Link to="/">Give</Link>
+              <Link to="/">Give</Link> */}
         </Drawer>}
         <div style={{width: '100vw', minHeight:'100vh'}}>
         <Header>
@@ -42,11 +42,11 @@ function App() {
               <span><IoTimeOutline color="black"/> 1:00PM</span>
             </MeetingDetails>
             <nav>
-              <Link to="/">Home</Link>
+              {/* <Link to="/">Home</Link>
               <Link to="/">Gallery</Link>
               <Link to="/">About Us</Link>
               <Link to="/">Sermons</Link>
-              <Link to="/">Give</Link>
+              <Link to="/">Give</Link> */}
               
             </nav>
           </Location>
@@ -79,6 +79,7 @@ const Header = styled.div`
   max-width: 1100px;
   margin: auto;
   @media only screen and (max-width: 600px) {
+  display: none;
   }
 `;
 const Hamburger = styled.span`
