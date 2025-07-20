@@ -22,7 +22,7 @@
   }
 }
 html{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {
   /* 4. Add accessible line-height */
@@ -30,7 +30,7 @@ body {
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: "Barlow Condensed", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 a{
   text-decoration: none;

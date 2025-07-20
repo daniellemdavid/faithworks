@@ -14,7 +14,7 @@ const Hero = styled.section`
   display: flex !important;
   flex-direction: column;
   align-content: center;
-  height: 80vh;
+  min-height: 600px;
   // background: 100%/100% 150% no-repeat url('/assets/handhigh1.jpg') ;
   text-align: center;
   padding: 3rem;
