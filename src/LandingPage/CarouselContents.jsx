@@ -30,7 +30,7 @@ const Hero = styled.section`
     content: "";
     position: absolute;
     inset: 0;
-    background: 100%/100% no-repeat url("/assets/handhigh1.jpg");
+    background: center/cover no-repeat url("/assets/handhigh1.jpg");
     z-index: -5;
   }
   ::after {
