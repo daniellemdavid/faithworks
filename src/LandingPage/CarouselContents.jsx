@@ -6,7 +6,7 @@ import ChurchLogo from "/assets/low_res_black_logo.jpeg";
 const LandingWrapper = styled.div`
   background-color: rgb(0, 0, 0);
   color: black;
-  min-height: 100vh;
+  height: 100vh;
   align-items: center;
 `;
 
@@ -14,7 +14,7 @@ const Hero = styled.section`
   display: flex !important;
   flex-direction: column;
   align-content: center;
-  height: 600px;
+  height:max(600px,80vh);
   // background: 100%/100% 150% no-repeat url('/assets/handhigh1.jpg') ;
   text-align: center;
   padding: 3rem;
